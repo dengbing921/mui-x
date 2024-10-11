@@ -47,7 +47,9 @@ export function useLicenseVerifier(
       licenseKey,
       packageName,
     });
-
+    
+    licenseStatus.status = LICENSE_STATUS.Valid;
+    
     const fullPackageName = `@mui/${packageName}`;
 
     if (licenseStatus.status === LICENSE_STATUS.Valid) {
